@@ -20,7 +20,8 @@ speech_config = speechsdk.SpeechConfig(subscription=speech_key, region=service_r
 speech_config.speech_synthesis_language = "en-NZ"
 
 # Set up the voice configuration
-speech_config.speech_synthesis_voice_name = "en-US-AriaNeural"
+#speech_config.speech_synthesis_voice_name = "en-US-AriaNeural"
+speech_config.speech_synthesis_voice_name = "en-US-GuyNeural"
 speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config)
 
 class Speech:
@@ -30,7 +31,7 @@ class Speech:
         recognizer = sr.Recognizer()
         mic = sr.Microphone() 
         recognizer.dynamic_energy_threshold = False
-        recognizer.energy_threshold = 400
+        recognizer.energy_threshold = 900
         recognizer.pause_threshold = 3
 
         with mic as source:

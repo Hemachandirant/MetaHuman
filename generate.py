@@ -152,10 +152,7 @@ class response_function:
                 },
             ]
 
-            # response = openai.Completion.create(
-            #     engine="text-davinci-002",
-            #     messages=messages,
-            # )
+    
 
             response = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo-0613",

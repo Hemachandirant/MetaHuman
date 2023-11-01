@@ -107,7 +107,7 @@ def Speech_support(stop_keyword="restart", exit_keyword="exit"):
         if st.sidebar.button("Stop", key="stop_button"):
             st.session_state.should_exit = True
 
-        welcome_message = "Hi Balaji, I am MyLiva, How can I assist you today"
+        welcome_message = "Hi, I am MyLiva, How can I assist you today"
 
         st.markdown(
             f"<div style='background-color: #ADD8E6; padding: 10px; border-radius: 5px; text-align: left; color: black;'>"
@@ -197,23 +197,6 @@ def Speech_support(stop_keyword="restart", exit_keyword="exit"):
                 {"role": "assistant", "content": response_text}
             )
 
-            # except Exception as e:
-            #     error_message = f"An error occurred: {str(e)}"
-            #     st.markdown(
-            #         f"<div style='background-color: #ADD8E6; padding: 10px; border-radius: 5px; text-align: left; color: red;'>"
-            #         f"{error_message}</div>",
-            #         unsafe_allow_html=True,
-            #     )
-
-            #     speech_functions.synthesize_and_play_speech(error_message)
-            #     # speech_functions.text_to_speech_elevanlabs(error_message)
-            #     st.session_state.messages.append(
-            #         {"role": "user", "content": input_text}
-            #     )
-            #     st.session_state.messages.append(
-            #         {"role": "assistant", "content": error_message}
-            #     )
-            #     break
 
 def Chat_support():
     st.title("🤖 Intelligent Chat Support")
