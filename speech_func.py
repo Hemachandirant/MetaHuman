@@ -3,13 +3,8 @@ import azure.cognitiveservices.speech as speechsdk
 import requests
 import pygame
 import openai
-import torch
-import noisereduce as nr
-import wave
-import numpy as np
-import base64
-from gtts import gTTS
 import os
+from gtts import gTTS
 
 
 
